@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment – Airline Reservation</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" style="border-radius:0; z-index:9999">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Airline Reservation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="background-wrapper d-flex align-items-center">
+    <div class="container py-5">
+      <header>
+        <h2>Payment</h2>
+        <hr>
+      </header>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card card-transparent">
+            <div class="card-header text-center">
+              <legend>Payment Information</legend>
+            </div>
+            <div class="card-body">
+              <form method="post">
+                <div class="mb-3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cardType" id="creditCard" value="credit">
+                    <label class="form-check-label text-white" for="creditCard">Credit</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cardType" id="debitCard" value="debit">
+                    <label class="form-check-label text-white" for="debitCard">Debit</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="cardNum" class="form-label">Card Number</label>
+                  <input type="text" class="form-control trans-input-area" id="cardNum" name="cardNum"
+                    placeholder="0000 0000 0000 0000" maxlength="19"
+                    pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}" required>
+                </div>
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <label for="expiry" class="form-label">Expiry</label>
+                    <input type="month" class="form-control trans-input-area" id="expiry" name="expiry" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="cvc" class="form-label">CVC</label>
+                    <input type="number" class="form-control trans-input-area" id="cvc" name="cvc"
+                      placeholder="123" min="100" max="9999" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  <i class="fas fa-credit-card"></i> Pay Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container-fluid">
+      <ul class="icons">
+        <li><a href="#" class="fab fa-twitter" style="color:grey" aria-label="Twitter"></a></li>
+        <li><a href="#" class="fab fa-facebook" style="color:grey" aria-label="Facebook"></a></li>
+        <li><a href="#" class="fab fa-instagram" style="color:grey" aria-label="Instagram"></a></li>
+        <li><a href="#" class="fas fa-envelope" style="color:grey" aria-label="Email"></a></li>
+      </ul>
+    </div>
+    <div class="copyright">&copy; Airline Reservation. All rights reserved.</div>
+  </footer>
+
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="myjs.js"></script>
+</body>
+</html>

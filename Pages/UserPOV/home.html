@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile – Airline Reservation</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark sticky-top" style="border-radius:0; z-index:9999">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Airline Reservation</a>
+      <ul class="navbar-nav ms-auto flex-row">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><span class="dropdown-item fw-bold">Username</span></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="home.html">View Profile</a></li>
+            <li><a class="dropdown-item" href="accounts.html">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div style="display:flex">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul class="nav flex-column sidebar-nav py-2">
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-sub="sub1">Dashboard</a>
+          <div id="sub1" class="sub-nav">
+            <a href="home.html" class="nav-link">Home</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-sub="sub2">Flight Schedule</a>
+          <div id="sub2" class="sub-nav" style="display:none">
+            <a href="newFlight.html" class="nav-link">Search for Flights</a>
+            <a href="flightResults.html" class="nav-link">Flights</a>
+            <a href="userManageFlights.html" class="nav-link">Manage Flights</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" data-sub="sub4">Accounts</a>
+          <div id="sub4" class="sub-nav" style="display:none">
+            <a href="accounts.html" class="nav-link">Edit Account</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content background-wrapper flex-grow-1">
+      <header>
+        <h1>Username</h1>
+        <hr>
+      </header>
+      <div class="card card-transparent mt-3">
+        <div class="card-header">
+          <legend class="text-center mb-0">Profile Information</legend>
+        </div>
+        <div class="card-body">
+          <h5>Email: <small class="fw-normal">user@example.com</small></h5>
+          <h5>Phone: <small class="fw-normal">715-894-7305</small></h5>
+          <h5>Date of Birth: <small class="fw-normal">07/30/1990</small></h5>
+          <h5>Address: <small class="fw-normal">123 Sunshine Circle</small></h5>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="myjs.js"></script>
+</body>
+</html>
