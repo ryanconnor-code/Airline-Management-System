@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us – Airline Reservation</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" style="border-radius:0; z-index:9999">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Airline Reservation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="aboutUS.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+              <i class="fas fa-user-plus"></i> Signup
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fas fa-right-to-bracket"></i> Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="background-wrapper d-flex align-items-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card card-transparent">
+            <div class="card-header text-center">
+              <legend>About Us</legend>
+            </div>
+            <div class="card-body">
+              <p class="text-white">
+                This system is a web-based project that provides clients with all the necessary features to book
+                their flight. This integrated airline reservation management application features an open
+                architecture that encourages the addition of new systems, meaning it can be updated and managed
+                to meet the evolving needs of the airline business. The application incorporates four main
+                objectives: user registration, login, reservation of flights, and cancellation of flights.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container-fluid">
+      <ul class="icons">
+        <li><a href="https://twitter.com/" class="fab fa-twitter" style="color:grey" target="_blank" aria-label="Twitter"></a></li>
+        <li><a href="https://www.facebook.com/" class="fab fa-facebook" style="color:grey" target="_blank" aria-label="Facebook"></a></li>
+        <li><a href="https://www.instagram.com/" class="fab fa-instagram" style="color:grey" target="_blank" aria-label="Instagram"></a></li>
+        <li><a href="mailto:info@airlinereservation.com" class="fas fa-envelope" style="color:grey" aria-label="Email"></a></li>
+      </ul>
+    </div>
+    <div class="copyright">&copy; Airline Reservation. All rights reserved.</div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content card-transparent">
+        <div class="modal-header card-transparent">
+          <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="home.html" method="post">
+          <div class="modal-body card-transparent">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Email</label>
+              <input type="email" class="form-control trans-input-area" placeholder="example@email.com" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control trans-input-area" placeholder="Enter Password" name="psw" required>
+            </div>
+            <button type="submit" class="btn btn-secondary w-100">Login</button>
+          </div>
+        </form>
+        <div class="modal-footer card-transparent">
+          <a href="forgotPassword.html" class="btn btn-secondary w-100">Forgot Password</a>
+          <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content card-transparent">
+        <div class="modal-header card-transparent">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="home.html" method="post">
+          <div class="modal-body card-transparent">
+            <div class="mb-2">
+              <label class="form-label fw-bold">First Name</label>
+              <input type="text" class="form-control trans-input-area" placeholder="First name" name="fname" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-bold">Last Name</label>
+              <input type="text" class="form-control trans-input-area" placeholder="Last name" name="lname" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-bold">Email</label>
+              <input type="email" class="form-control trans-input-area" placeholder="example@email.com" name="email" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control trans-input-area" placeholder="Enter Password" name="psw" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" class="form-control trans-input-area" name="dob" min="1920-01-01" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label fw-bold">Address</label>
+              <input type="text" class="form-control trans-input-area" placeholder="1234 Main Street" name="address" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Phone Number</label>
+              <input type="tel" class="form-control trans-input-area" placeholder="608-495-4824"
+                pattern="\d{3}-\d{3}-\d{4}" name="phonenum" required>
+            </div>
+            <button type="submit" class="btn btn-secondary w-100">Sign Up</button>
+          </div>
+        </form>
+        <div class="modal-footer card-transparent">
+          <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="myjs.js"></script>
+</body>
+</html>
