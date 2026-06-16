@@ -3,34 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile – Airline Reservation</title>
+  <title>Dashboard – SkyLine Air</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="mycss.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark sticky-top" style="border-radius:0; z-index:9999">
+  <nav class="navbar navbar-dark sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Airline Reservation</a>
-      <ul class="navbar-nav ms-auto flex-row">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-plane brand-icon"></i> SkyLine Air
+      </a>
+      <ul class="navbar-nav ms-auto flex-row align-items-center gap-2">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user-circle me-1"></i> Username
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><span class="dropdown-item fw-bold">Username</span></li>
+            <li><span class="dropdown-item fw-bold text-muted" style="font-size:0.8rem">ACCOUNT</span></li>
+            <li><a class="dropdown-item" href="home.html"><i class="fas fa-user me-2 text-primary"></i>View Profile</a></li>
+            <li><a class="dropdown-item" href="accounts.html"><i class="fas fa-gear me-2 text-muted"></i>Settings</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="home.html">View Profile</a></li>
-            <li><a class="dropdown-item" href="accounts.html">Settings</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i class="fas fa-right-from-bracket me-2"></i>Logout</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i> Logout</a>
         </li>
       </ul>
     </div>
@@ -39,23 +37,33 @@
   <div style="display:flex">
     <!-- Sidebar -->
     <nav class="sidebar">
-      <ul class="nav flex-column sidebar-nav py-2">
+      <div class="sidebar-section-label">Navigation</div>
+      <ul class="nav flex-column sidebar-nav py-1">
         <li class="nav-item">
-          <a href="#" class="nav-link" data-sub="sub1">Dashboard</a>
+          <a href="#" class="nav-link active" data-sub="sub1">
+            <i class="fas fa-gauge-high menu-icon"></i> Dashboard
+            <i class="fas fa-chevron-down chevron"></i>
+          </a>
           <div id="sub1" class="sub-nav">
             <a href="home.html" class="nav-link">Home</a>
           </div>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" data-sub="sub2">Flight Schedule</a>
+          <a href="#" class="nav-link" data-sub="sub2">
+            <i class="fas fa-plane-departure menu-icon"></i> Flights
+            <i class="fas fa-chevron-down chevron"></i>
+          </a>
           <div id="sub2" class="sub-nav" style="display:none">
-            <a href="newFlight.html" class="nav-link">Search for Flights</a>
-            <a href="flightResults.html" class="nav-link">Flights</a>
-            <a href="userManageFlights.html" class="nav-link">Manage Flights</a>
+            <a href="newFlight.html" class="nav-link">Search Flights</a>
+            <a href="flightResults.html" class="nav-link">Results</a>
+            <a href="userManageFlights.html" class="nav-link">My Bookings</a>
           </div>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" data-sub="sub4">Accounts</a>
+          <a href="#" class="nav-link" data-sub="sub4">
+            <i class="fas fa-user-gear menu-icon"></i> Account
+            <i class="fas fa-chevron-down chevron"></i>
+          </a>
           <div id="sub4" class="sub-nav" style="display:none">
             <a href="accounts.html" class="nav-link">Edit Account</a>
           </div>
@@ -64,22 +72,155 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content background-wrapper flex-grow-1">
-      <header>
-        <h1>Username</h1>
-        <hr>
-      </header>
-      <div class="card card-transparent mt-3">
-        <div class="card-header">
-          <legend class="text-center mb-0">Profile Information</legend>
+    <main class="main-content flex-grow-1">
+
+      <!-- Stat Cards -->
+      <div class="row g-3 mb-4">
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card blue">
+            <div class="stat-icon text-primary"><i class="fas fa-plane"></i></div>
+            <div class="stat-value">12</div>
+            <div class="stat-label">Total Flights</div>
+          </div>
         </div>
-        <div class="card-body">
-          <h5>Email: <small class="fw-normal">user@example.com</small></h5>
-          <h5>Phone: <small class="fw-normal">715-894-7305</small></h5>
-          <h5>Date of Birth: <small class="fw-normal">07/30/1990</small></h5>
-          <h5>Address: <small class="fw-normal">123 Sunshine Circle</small></h5>
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card gold">
+            <div class="stat-icon" style="color:var(--brand-gold)"><i class="fas fa-calendar-check"></i></div>
+            <div class="stat-value">3</div>
+            <div class="stat-label">Upcoming</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card green">
+            <div class="stat-icon" style="color:#22c55e"><i class="fas fa-circle-check"></i></div>
+            <div class="stat-value">8</div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card" style="border:none;border-radius:16px;padding:1.5rem;background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.07)">
+            <div class="stat-icon" style="color:#a855f7"><i class="fas fa-star"></i></div>
+            <div class="stat-value" style="color:#a855f7">Gold</div>
+            <div class="stat-label">Member Tier</div>
+          </div>
         </div>
       </div>
+
+      <!-- Profile & Quick Actions -->
+      <div class="row g-4">
+        <!-- Profile Card -->
+        <div class="col-lg-4">
+          <div class="profile-card card">
+            <div class="profile-banner"></div>
+            <div class="profile-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-info">
+              <h4>Username</h4>
+              <p class="profile-role">Passenger &bull; Gold Member</p>
+
+              <div class="profile-detail-row">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">user@example.com</span>
+                </div>
+              </div>
+              <div class="profile-detail-row">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <span class="detail-label">Phone</span>
+                  <span class="detail-value">715-894-7305</span>
+                </div>
+              </div>
+              <div class="profile-detail-row">
+                <i class="fas fa-cake-candles"></i>
+                <div>
+                  <span class="detail-label">Date of Birth</span>
+                  <span class="detail-value">07 / 30 / 1990</span>
+                </div>
+              </div>
+              <div class="profile-detail-row">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                  <span class="detail-label">Address</span>
+                  <span class="detail-value">123 Sunshine Circle</span>
+                </div>
+              </div>
+
+              <a href="accounts.html" class="btn btn-primary w-100 mt-3">
+                <i class="fas fa-pen me-2"></i>Edit Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="col-lg-8">
+          <div class="card h-100">
+            <div class="card-header">
+              <legend><i class="fas fa-bolt me-2"></i>Quick Actions</legend>
+            </div>
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <a href="newFlight.html" class="text-decoration-none">
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:#f0f7ff;transition:background 0.2s" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f0f7ff'">
+                      <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#3b82f6,#1e40af);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0">
+                        <i class="fas fa-magnifying-glass"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:700;color:#0f172a;font-size:0.9rem">Search Flights</div>
+                        <div style="font-size:0.78rem;color:#64748b">Find your next trip</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-6">
+                  <a href="userManageFlights.html" class="text-decoration-none">
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:#f0fff4;transition:background 0.2s" onmouseover="this.style.background='#bbf7d0'" onmouseout="this.style.background='#f0fff4'">
+                      <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#22c55e,#15803d);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0">
+                        <i class="fas fa-ticket"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:700;color:#0f172a;font-size:0.9rem">My Bookings</div>
+                        <div style="font-size:0.78rem;color:#64748b">Manage reservations</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-6">
+                  <a href="accounts.html" class="text-decoration-none">
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:#fefce8;transition:background 0.2s" onmouseover="this.style.background='#fde68a'" onmouseout="this.style.background='#fefce8'">
+                      <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0">
+                        <i class="fas fa-credit-card"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:700;color:#0f172a;font-size:0.9rem">Payment Methods</div>
+                        <div style="font-size:0.78rem;color:#64748b">Manage your cards</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-6">
+                  <a href="contactus.html" class="text-decoration-none">
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:#faf5ff;transition:background 0.2s" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#faf5ff'">
+                      <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#a855f7,#7c3aed);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0">
+                        <i class="fas fa-headset"></i>
+                      </div>
+                      <div>
+                        <div style="font-weight:700;color:#0f172a;font-size:0.9rem">Get Support</div>
+                        <div style="font-size:0.78rem;color:#64748b">We're here to help</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
   </div>
 

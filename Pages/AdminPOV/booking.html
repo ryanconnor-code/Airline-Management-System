@@ -3,35 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Book Flight – Admin</title>
+  <title>Book Flight – SkyLine Air</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="../UserPOV/mycss.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" style="border-radius:0; z-index:9999">
+  <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Airline Reservation</a>
+      <a class="navbar-brand" href="../UserPOV/index.html">
+        <i class="fas fa-plane brand-icon"></i> SkyLine Air
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../UserPOV/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="booking.html"><i class="fas fa-ticket me-1"></i>Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="../UserPOV/aboutUS.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../UserPOV/contactus.html">Contact Us</a></li>
         </ul>
-        <div class="d-flex me-3">
-          <input type="text" class="form-control me-2" placeholder="Search">
-          <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
-        </div>
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-right-to-bracket"></i> Login</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav-cta" href="../UserPOV/index.html"><i class="fas fa-right-to-bracket me-1"></i>Login</a></li>
         </ul>
       </div>
     </div>
@@ -40,20 +38,27 @@
   <!-- Content -->
   <div class="background-wrapper d-flex align-items-center">
     <div class="container py-5">
-      <header>
-        <h2>Book Your Flight</h2>
-        <hr>
-      </header>
+      <!-- Progress indicator -->
+      <div class="text-center mb-4">
+        <div class="d-inline-flex align-items-center gap-2">
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--brand-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem">1</div>
+          <span style="color:#fff;font-weight:600;font-size:0.9rem">Flight Info</span>
+          <i class="fas fa-chevron-right" style="color:rgba(255,255,255,0.3);font-size:0.75rem"></i>
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem">2</div>
+          <span style="color:rgba(255,255,255,0.45);font-weight:600;font-size:0.9rem">Passengers</span>
+        </div>
+      </div>
+
       <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
+        <div class="col-md-10 col-lg-7">
           <div class="card card-transparent">
-            <div class="card-header text-center">
-              <legend>Flight Information</legend>
+            <div class="card-header">
+              <legend><i class="fas fa-plane-departure me-2"></i>Flight Information</legend>
             </div>
             <div class="card-body">
               <form method="post" action="flights.html">
                 <div class="mb-3">
-                  <label for="flightClass" class="form-label">Class</label>
+                  <label for="flightClass" class="form-label">Cabin Class</label>
                   <select class="form-select trans-input-area" id="flightClass" name="class">
                     <option>Economy</option>
                     <option>Business</option>
@@ -62,41 +67,37 @@
                 </div>
                 <div class="row g-3 mb-3">
                   <div class="col-md-6">
-                    <label for="from" class="form-label">From</label>
-                    <input type="text" class="form-control trans-input-area" id="from" name="from"
-                      placeholder="Origin" required>
+                    <label for="from" class="form-label"><i class="fas fa-plane-departure me-1"></i>From</label>
+                    <input type="text" class="form-control trans-input-area" id="from" name="from" placeholder="Origin city or airport" required>
                   </div>
                   <div class="col-md-6">
-                    <label for="to" class="form-label">To</label>
-                    <input type="text" class="form-control trans-input-area" id="to" name="to"
-                      placeholder="Destination" required>
+                    <label for="to" class="form-label"><i class="fas fa-plane-arrival me-1"></i>To</label>
+                    <input type="text" class="form-control trans-input-area" id="to" name="to" placeholder="Destination city or airport" required>
                   </div>
                 </div>
                 <div class="row g-3 mb-3">
                   <div class="col-md-6">
-                    <label for="deptDate" class="form-label">Departure Date</label>
+                    <label for="deptDate" class="form-label"><i class="fas fa-calendar me-1"></i>Departure Date</label>
                     <input type="date" class="form-control trans-input-area" id="deptDate" name="deptDate" required>
                   </div>
                   <div class="col-md-6">
-                    <label for="retDate" class="form-label">Return Date</label>
+                    <label for="retDate" class="form-label"><i class="fas fa-calendar-check me-1"></i>Return Date</label>
                     <input type="date" class="form-control trans-input-area" id="retDate" name="retDate">
                   </div>
                 </div>
                 <div class="row g-3 mb-4">
                   <div class="col-md-6">
-                    <label for="adults" class="form-label">Adults</label>
-                    <input type="number" class="form-control trans-input-area" id="adults" name="adults"
-                      value="1" min="1" required>
+                    <label for="adults" class="form-label"><i class="fas fa-user me-1"></i>Adults</label>
+                    <input type="number" class="form-control trans-input-area" id="adults" name="adults" value="1" min="1" required>
                   </div>
                   <div class="col-md-6">
-                    <label for="children" class="form-label">Children</label>
-                    <input type="number" class="form-control trans-input-area" id="children" name="children"
-                      value="0" min="0">
+                    <label for="children" class="form-label"><i class="fas fa-child me-1"></i>Children</label>
+                    <input type="number" class="form-control trans-input-area" id="children" name="children" value="0" min="0">
                   </div>
                 </div>
-                <div class="text-end">
-                  <button type="submit" class="btn btn-primary">
-                    Continue <i class="fas fa-arrow-right"></i>
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary px-4 py-2">
+                    Continue <i class="fas fa-arrow-right ms-2"></i>
                   </button>
                 </div>
               </form>
@@ -109,15 +110,17 @@
 
   <!-- Footer -->
   <footer id="footer">
-    <div class="container-fluid">
+    <div class="container">
+      <span class="footer-brand"><i class="fas fa-plane brand-icon"></i> SkyLine Air</span>
+      <p class="footer-tagline">Your trusted partner for air travel worldwide.</p>
       <ul class="icons">
-        <li><a href="#" class="fab fa-twitter" style="color:grey" aria-label="Twitter"></a></li>
-        <li><a href="#" class="fab fa-facebook" style="color:grey" aria-label="Facebook"></a></li>
-        <li><a href="#" class="fab fa-instagram" style="color:grey" aria-label="Instagram"></a></li>
-        <li><a href="#" class="fas fa-envelope" style="color:grey" aria-label="Email"></a></li>
+        <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:info@skylineair.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
       </ul>
+      <p class="copyright">&copy; 2026 SkyLine Air Reservation System. All rights reserved.</p>
     </div>
-    <div class="copyright">&copy; Airline Reservation. All rights reserved.</div>
   </footer>
 
   <script src="../../js/bootstrap.bundle.min.js"></script>

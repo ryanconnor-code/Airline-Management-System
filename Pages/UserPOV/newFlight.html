@@ -3,34 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Search Flights – Airline Reservation</title>
+  <title>Search Flights – SkyLine Air</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="mycss.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark sticky-top" style="border-radius:0; z-index:9999">
+  <nav class="navbar navbar-dark sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Airline Reservation</a>
-      <ul class="navbar-nav ms-auto flex-row">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-plane brand-icon"></i> SkyLine Air
+      </a>
+      <ul class="navbar-nav ms-auto flex-row align-items-center gap-2">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user-circle me-1"></i> Username
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><span class="dropdown-item fw-bold">Username</span></li>
+            <li><span class="dropdown-item fw-bold text-muted" style="font-size:0.8rem">ACCOUNT</span></li>
+            <li><a class="dropdown-item" href="home.html"><i class="fas fa-user me-2 text-primary"></i>View Profile</a></li>
+            <li><a class="dropdown-item" href="accounts.html"><i class="fas fa-gear me-2 text-muted"></i>Settings</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="home.html">View Profile</a></li>
-            <li><a class="dropdown-item" href="accounts.html">Settings</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i class="fas fa-right-from-bracket me-2"></i>Logout</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"><i class="fas fa-right-from-bracket"></i> Logout</a>
         </li>
       </ul>
     </div>
@@ -39,23 +37,33 @@
   <div style="display:flex">
     <!-- Sidebar -->
     <nav class="sidebar">
-      <ul class="nav flex-column sidebar-nav py-2">
+      <div class="sidebar-section-label">Navigation</div>
+      <ul class="nav flex-column sidebar-nav py-1">
         <li class="nav-item">
-          <a href="#" class="nav-link" data-sub="sub1">Dashboard</a>
+          <a href="#" class="nav-link" data-sub="sub1">
+            <i class="fas fa-gauge-high menu-icon"></i> Dashboard
+            <i class="fas fa-chevron-down chevron"></i>
+          </a>
           <div id="sub1" class="sub-nav" style="display:none">
             <a href="home.html" class="nav-link">Home</a>
           </div>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link active" data-sub="sub2">Flight Schedule</a>
+          <a href="#" class="nav-link active" data-sub="sub2">
+            <i class="fas fa-plane-departure menu-icon"></i> Flights
+            <i class="fas fa-chevron-down chevron"></i>
+          </a>
           <div id="sub2" class="sub-nav">
-            <a href="newFlight.html" class="nav-link">Search for Flights</a>
-            <a href="flightResults.html" class="nav-link">Flights</a>
-            <a href="userManageFlights.html" class="nav-link">Manage Flights</a>
+            <a href="newFlight.html" class="nav-link">Search Flights</a>
+            <a href="flightResults.html" class="nav-link">Results</a>
+            <a href="userManageFlights.html" class="nav-link">My Bookings</a>
           </div>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" data-sub="sub4">Accounts</a>
+          <a href="#" class="nav-link" data-sub="sub4">
+            <i class="fas fa-user-gear menu-icon"></i> Account
+            <i class="fas fa-chevron-down chevron"></i>
+          </a>
           <div id="sub4" class="sub-nav" style="display:none">
             <a href="accounts.html" class="nav-link">Edit Account</a>
           </div>
@@ -65,36 +73,46 @@
 
     <!-- Main Content -->
     <main class="main-content flex-grow-1">
-      <h2>Search for Flights</h2>
-      <hr>
+      <div class="page-header">
+        <h2>
+          <span class="page-header-icon"><i class="fas fa-magnifying-glass"></i></span>
+          Search Flights
+        </h2>
+        <hr>
+      </div>
+
       <div class="card">
-        <div class="card-header text-center">
-          <legend class="mb-0">Round Trip</legend>
+        <div class="card-header">
+          <legend><i class="fas fa-route me-2"></i>Round Trip</legend>
         </div>
         <div class="card-body">
-          <form method="post" action="flightResults.html">
-            <!-- Trip type toggle -->
-            <div class="mb-3">
-              <a href="oneWayFlight.html" class="btn btn-outline-secondary me-2">One Way</a>
-              <a href="newFlight.html" class="btn btn-primary">Round Trip</a>
-            </div>
+          <!-- Trip type toggle -->
+          <div class="d-flex gap-2 mb-4">
+            <a href="oneWayFlight.html" class="btn btn-outline-primary">
+              <i class="fas fa-arrow-right me-2"></i>One Way
+            </a>
+            <a href="newFlight.html" class="btn btn-primary">
+              <i class="fas fa-arrows-left-right me-2"></i>Round Trip
+            </a>
+          </div>
 
+          <form method="post" action="flightResults.html">
             <!-- Origin / Destination -->
             <div class="row g-3 mb-3">
               <div class="col-md-6">
-                <label for="toAirport" class="form-label">To</label>
-                <select class="form-select" id="toAirport" name="to">
-                  <option>O'Hare (ORD)</option>
-                  <option>Cincinnati (CVG)</option>
-                  <option>Dayton (DAY)</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="fromAirport" class="form-label">From</label>
+                <label for="fromAirport" class="form-label"><i class="fas fa-plane-departure me-1 text-primary"></i>From</label>
                 <select class="form-select" id="fromAirport" name="from">
                   <option>Detroit (DTW)</option>
                   <option>St. Paul (MSP)</option>
                   <option>Columbus (CMH)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="toAirport" class="form-label"><i class="fas fa-plane-arrival me-1 text-primary"></i>To</label>
+                <select class="form-select" id="toAirport" name="to">
+                  <option>O'Hare (ORD)</option>
+                  <option>Cincinnati (CVG)</option>
+                  <option>Dayton (DAY)</option>
                 </select>
               </div>
             </div>
@@ -102,50 +120,53 @@
             <!-- Dates / Times -->
             <div class="row g-3 mb-3">
               <div class="col-md-6">
-                <label for="deptDate" class="form-label">Departure Date</label>
+                <label for="deptDate" class="form-label"><i class="fas fa-calendar me-1 text-primary"></i>Departure Date</label>
                 <input type="date" class="form-control" id="deptDate" name="deptDate" required>
               </div>
               <div id="box" class="col-md-6">
-                <label for="retDate" class="form-label">Return Date</label>
+                <label for="retDate" class="form-label"><i class="fas fa-calendar-check me-1 text-primary"></i>Return Date</label>
                 <input type="date" class="form-control" id="retDate" name="retDate">
               </div>
               <div class="col-md-6">
-                <label for="deptTime" class="form-label">Departure Time</label>
+                <label for="deptTime" class="form-label"><i class="fas fa-clock me-1 text-primary"></i>Departure Time</label>
                 <input type="time" class="form-control" id="deptTime" name="deptTime">
               </div>
               <div class="col-md-6">
-                <label for="retTime" class="form-label">Return Time</label>
+                <label for="retTime" class="form-label"><i class="fas fa-clock me-1 text-primary"></i>Return Time</label>
                 <input type="time" class="form-control" id="retTime" name="retTime">
               </div>
             </div>
 
-            <!-- Layovers -->
-            <div class="row g-3 mb-3">
+            <!-- Passengers / Layovers -->
+            <div class="row g-3 mb-4">
               <div class="col-md-4">
-                <label for="layovers" class="form-label">Layovers</label>
+                <label for="layovers" class="form-label"><i class="fas fa-code-branch me-1 text-primary"></i>Layovers</label>
                 <input type="number" class="form-control" id="layovers" name="layovers" value="0" min="0">
               </div>
             </div>
 
             <!-- Class selection accordion -->
-            <p class="fw-semibold">Cabin Class</p>
-            <div class="accordion mb-3" id="classAccordion">
+            <p class="fw-bold mb-2" style="color:#374151"><i class="fas fa-couch me-2 text-primary"></i>Cabin Class</p>
+            <div class="accordion mb-4" id="classAccordion">
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFirst" aria-expanded="false">
-                    First Class
+                    <i class="fas fa-crown me-2" style="color:var(--brand-gold)"></i>First Class
                   </button>
                 </h2>
                 <div id="collapseFirst" class="accordion-collapse collapse" data-bs-parent="#classAccordion">
                   <div class="accordion-body">
-                    <div class="row g-2">
+                    <div class="row g-3">
                       <div class="col-md-4">
                         <label class="form-label">Seats</label>
-                        <input type="number" class="form-control" name="firstSeats" value="0" min="0">
+                        <input type="number" class="form-control" name="firstSeats" value="1" min="1">
                       </div>
                       <div class="col-md-4">
-                        <label class="form-label">Price per seat</label>
-                        <input type="number" class="form-control" name="firstPrice" value="0" min="0">
+                        <label class="form-label">Price per Seat</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input type="number" class="form-control" name="firstPrice" value="0" min="0">
+                        </div>
                       </div>
                       <div class="col-md-4">
                         <label class="form-label">Features</label>
@@ -158,19 +179,22 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBusiness" aria-expanded="false">
-                    Business Class
+                    <i class="fas fa-briefcase me-2" style="color:var(--brand-accent)"></i>Business Class
                   </button>
                 </h2>
                 <div id="collapseBusiness" class="accordion-collapse collapse" data-bs-parent="#classAccordion">
                   <div class="accordion-body">
-                    <div class="row g-2">
+                    <div class="row g-3">
                       <div class="col-md-4">
                         <label class="form-label">Seats</label>
-                        <input type="number" class="form-control" name="bizSeats" value="0" min="0">
+                        <input type="number" class="form-control" name="bizSeats" value="1" min="1">
                       </div>
                       <div class="col-md-4">
-                        <label class="form-label">Price per seat</label>
-                        <input type="number" class="form-control" name="bizPrice" value="0" min="0">
+                        <label class="form-label">Price per Seat</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input type="number" class="form-control" name="bizPrice" value="0" min="0">
+                        </div>
                       </div>
                       <div class="col-md-4">
                         <label class="form-label">Features</label>
@@ -183,19 +207,22 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEconomy" aria-expanded="false">
-                    Economy Class
+                    <i class="fas fa-ticket me-2 text-muted"></i>Economy Class
                   </button>
                 </h2>
                 <div id="collapseEconomy" class="accordion-collapse collapse" data-bs-parent="#classAccordion">
                   <div class="accordion-body">
-                    <div class="row g-2">
+                    <div class="row g-3">
                       <div class="col-md-4">
                         <label class="form-label">Seats</label>
-                        <input type="number" class="form-control" name="econSeats" value="0" min="0">
+                        <input type="number" class="form-control" name="econSeats" value="1" min="1">
                       </div>
                       <div class="col-md-4">
-                        <label class="form-label">Price per seat</label>
-                        <input type="number" class="form-control" name="econPrice" value="0" min="0">
+                        <label class="form-label">Price per Seat</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input type="number" class="form-control" name="econPrice" value="0" min="0">
+                        </div>
                       </div>
                       <div class="col-md-4">
                         <label class="form-label">Features</label>
@@ -207,9 +234,12 @@
               </div>
             </div>
 
-            <div class="text-end">
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-search"></i> Search
+            <div class="d-flex justify-content-end gap-2">
+              <button type="reset" class="btn btn-outline-secondary">
+                <i class="fas fa-rotate-left me-1"></i> Reset
+              </button>
+              <button type="submit" class="btn btn-primary px-4">
+                <i class="fas fa-magnifying-glass me-2"></i>Search Flights
               </button>
             </div>
           </form>

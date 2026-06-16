@@ -3,31 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Passenger Info – Admin</title>
+  <title>Passenger Info – SkyLine Air</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="../UserPOV/mycss.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" style="border-radius:0; z-index:9999">
+  <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Airline Reservation</a>
+      <a class="navbar-brand" href="../UserPOV/index.html">
+        <i class="fas fa-plane brand-icon"></i> SkyLine Air
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../UserPOV/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="booking.html"><i class="fas fa-ticket me-1"></i>Booking</a></li>
+          <li class="nav-item"><a class="nav-link" href="../UserPOV/aboutUS.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../UserPOV/contactus.html">Contact Us</a></li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-right-to-bracket"></i> Login</a></li>
+          <li class="nav-item"><a class="nav-link btn-nav-cta" href="../UserPOV/index.html"><i class="fas fa-right-to-bracket me-1"></i>Login</a></li>
         </ul>
       </div>
     </div>
@@ -36,95 +38,101 @@
   <!-- Content -->
   <div class="background-wrapper d-flex align-items-center">
     <div class="container py-5">
+      <!-- Progress indicator -->
+      <div class="text-center mb-4">
+        <div class="d-inline-flex align-items-center gap-2">
+          <div style="width:32px;height:32px;border-radius:50%;background:rgba(34,197,94,0.8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem"><i class="fas fa-check" style="font-size:0.7rem"></i></div>
+          <span style="color:rgba(255,255,255,0.5);font-weight:500;font-size:0.9rem;text-decoration:line-through">Flight Info</span>
+          <i class="fas fa-chevron-right" style="color:rgba(255,255,255,0.3);font-size:0.75rem"></i>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--brand-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem">2</div>
+          <span style="color:#fff;font-weight:600;font-size:0.9rem">Passengers</span>
+        </div>
+      </div>
+
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8">
-          <div class="card card-transparent">
-            <div class="card-header text-center">
-              <legend>Passenger Information</legend>
-            </div>
-            <div class="card-body">
-
-              <!-- Adults section -->
-              <h5 class="text-white mb-3">Adult Details</h5>
-              <hr>
-              <div class="mb-3">
-                <label for="salutation" class="form-label">Salutation</label>
-                <select class="form-select trans-input-area" id="salutation" name="salutation">
-                  <option>Mr.</option>
-                  <option>Mrs.</option>
-                  <option>Ms.</option>
-                </select>
+          <form method="post">
+            <!-- Adults -->
+            <div class="card card-transparent mb-4">
+              <div class="card-header">
+                <legend><i class="fas fa-user me-2"></i>Adult Details</legend>
               </div>
-              <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                  <label for="adultFirst" class="form-label">First Name</label>
-                  <input type="text" class="form-control trans-input-area" id="adultFirst" name="adultFirst"
-                    placeholder="First name" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="adultLast" class="form-label">Last Name</label>
-                  <input type="text" class="form-control trans-input-area" id="adultLast" name="adultLast"
-                    placeholder="Last name" required>
-                </div>
-              </div>
-              <div class="row g-3 mb-3">
-                <div class="col-md-4">
-                  <label for="phoneType" class="form-label">Phone Type</label>
-                  <select class="form-select trans-input-area" id="phoneType" name="phoneType">
-                    <option>Home</option>
-                    <option>Mobile</option>
-                    <option>Business</option>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="salutation" class="form-label">Salutation</label>
+                  <select class="form-select trans-input-area" id="salutation" name="salutation" style="max-width:180px">
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                    <option>Ms.</option>
                   </select>
                 </div>
-                <div class="col-md-3">
-                  <label for="countryCode" class="form-label">Country Code</label>
-                  <input type="text" class="form-control trans-input-area" id="countryCode" name="countryCode"
-                    placeholder="+1" required>
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="adultFirst" class="form-label">First Name</label>
+                    <input type="text" class="form-control trans-input-area" id="adultFirst" name="adultFirst" placeholder="First name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="adultLast" class="form-label">Last Name</label>
+                    <input type="text" class="form-control trans-input-area" id="adultLast" name="adultLast" placeholder="Last name" required>
+                  </div>
                 </div>
-                <div class="col-md-5">
-                  <label for="phone" class="form-label">Number</label>
-                  <input type="tel" class="form-control trans-input-area" id="phone" name="phone"
-                    placeholder="555-123-4567" required>
+                <div class="row g-3 mb-3">
+                  <div class="col-md-4">
+                    <label for="phoneType" class="form-label">Phone Type</label>
+                    <select class="form-select trans-input-area" id="phoneType" name="phoneType">
+                      <option>Home</option>
+                      <option>Mobile</option>
+                      <option>Business</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="countryCode" class="form-label">Country Code</label>
+                    <input type="text" class="form-control trans-input-area" id="countryCode" name="countryCode" placeholder="+1" required>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control trans-input-area" id="phone" name="phone" placeholder="555-123-4567" required>
+                  </div>
                 </div>
-              </div>
-              <div class="mb-4">
-                <label for="adultEmail" class="form-label">Email</label>
-                <input type="email" class="form-control trans-input-area" id="adultEmail" name="adultEmail"
-                  placeholder="example@email.com" required>
-              </div>
-
-              <hr>
-
-              <!-- Children section -->
-              <h5 class="text-white mb-3">Children Details</h5>
-              <hr>
-              <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                  <label for="childFirst" class="form-label">First Name</label>
-                  <input type="text" class="form-control trans-input-area" id="childFirst" name="childFirst"
-                    placeholder="First name">
+                <div class="mb-0">
+                  <label for="adultEmail" class="form-label">Email Address</label>
+                  <input type="email" class="form-control trans-input-area" id="adultEmail" name="adultEmail" placeholder="example@email.com" required>
                 </div>
-                <div class="col-md-6">
-                  <label for="childLast" class="form-label">Last Name</label>
-                  <input type="text" class="form-control trans-input-area" id="childLast" name="childLast"
-                    placeholder="Last name">
-                </div>
-              </div>
-              <div class="mb-4">
-                <label for="childDob" class="form-label">Date of Birth <small>(under 12 years)</small></label>
-                <input type="date" class="form-control trans-input-area" id="childDob" name="childDob">
-              </div>
-
-              <div class="d-flex justify-content-between">
-                <a href="booking.html" class="btn btn-secondary">
-                  <i class="fas fa-arrow-left"></i> Back
-                </a>
-                <button type="submit" class="btn btn-primary">
-                  Continue <i class="fas fa-arrow-right"></i>
-                </button>
               </div>
             </div>
-          </div>
+
+            <!-- Children -->
+            <div class="card card-transparent mb-4">
+              <div class="card-header">
+                <legend><i class="fas fa-child me-2"></i>Children Details <small style="font-weight:400;font-size:0.8rem;opacity:0.7">(optional)</small></legend>
+              </div>
+              <div class="card-body">
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="childFirst" class="form-label">First Name</label>
+                    <input type="text" class="form-control trans-input-area" id="childFirst" name="childFirst" placeholder="First name">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="childLast" class="form-label">Last Name</label>
+                    <input type="text" class="form-control trans-input-area" id="childLast" name="childLast" placeholder="Last name">
+                  </div>
+                </div>
+                <div>
+                  <label for="childDob" class="form-label">Date of Birth <small style="opacity:0.6">(under 12 years)</small></label>
+                  <input type="date" class="form-control trans-input-area" id="childDob" name="childDob">
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <a href="booking.html" class="btn btn-secondary px-4">
+                <i class="fas fa-arrow-left me-2"></i>Back
+              </a>
+              <button type="submit" class="btn btn-primary px-4 py-2">
+                Confirm Booking <i class="fas fa-check ms-2"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

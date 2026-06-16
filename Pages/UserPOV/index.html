@@ -6,33 +6,35 @@
   <title>Airline Reservation System</title>
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="mycss.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg" style="border-radius:0; z-index:9999">
+  <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Airline Reservation</a>
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-plane brand-icon"></i> SkyLine Air
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="aboutUS.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutUS.html"><i class="fas fa-circle-info me-1"></i>About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fas fa-envelope me-1"></i>Contact</a></li>
         </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav gap-1 align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
-              <i class="fas fa-user-plus"></i> Signup
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <i class="fas fa-right-to-bracket me-1"></i> Log In
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <i class="fas fa-right-to-bracket"></i> Login
+            <a class="nav-link btn-nav-cta" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+              <i class="fas fa-user-plus me-1"></i> Sign Up
             </a>
           </li>
         </ul>
@@ -40,7 +42,7 @@
     </div>
   </nav>
 
-  <!-- Carousel -->
+  <!-- Hero Carousel -->
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -50,35 +52,35 @@
     </div>
     <div class="carousel-inner" style="max-height:620px; overflow:hidden">
       <div class="carousel-item active">
-        <img src="../images/pic3.jpg" class="d-block w-100" alt="Welcome slide" style="object-fit:cover;max-height:620px">
+        <img src="../images/pic3.jpg" class="d-block w-100" alt="Welcome slide" style="object-fit:cover;height:620px">
         <div class="carousel-caption">
-          <p>Welcome to</p>
-          <hr style="width:40%; margin:auto">
-          <h2>Airline Reservation</h2>
+          <span class="caption-eyebrow">Welcome aboard</span>
+          <h2>Fly Anywhere.<br>Live Everywhere.</h2>
+          <a href="#" class="caption-cta" data-bs-toggle="modal" data-bs-target="#signupModal">Get Started</a>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../images/pic4.jpg" class="d-block w-100" alt="Book your flight" style="object-fit:cover;max-height:620px">
+        <img src="../images/pic4.jpg" class="d-block w-100" alt="Book your flight" style="object-fit:cover;height:620px">
         <div class="carousel-caption">
-          <p>Come fly with us!</p>
-          <hr style="width:40%; margin:auto">
-          <h2>Book your flight</h2>
+          <span class="caption-eyebrow">Come fly with us</span>
+          <h2>Your Journey<br>Starts Here.</h2>
+          <a href="#" class="caption-cta" data-bs-toggle="modal" data-bs-target="#loginModal">Book a Flight</a>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../images/pic8.jpg" class="d-block w-100" alt="Luxurious travel" style="object-fit:cover;max-height:620px">
+        <img src="../images/pic8.jpg" class="d-block w-100" alt="Luxurious travel" style="object-fit:cover;height:620px">
         <div class="carousel-caption">
-          <p>Why choose us!</p>
-          <hr style="width:40%; margin:auto">
-          <h2>Luxurious &amp; Safest</h2>
+          <span class="caption-eyebrow">Why choose us</span>
+          <h2>Luxurious &amp;<br>Safest Travel.</h2>
+          <a href="aboutUS.html" class="caption-cta">Discover More</a>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../images/pic9.jpg" class="d-block w-100" alt="Contact us" style="object-fit:cover;max-height:620px">
+        <img src="../images/pic9.jpg" class="d-block w-100" alt="Contact us" style="object-fit:cover;height:620px">
         <div class="carousel-caption">
-          <p>Have any question?</p>
-          <hr style="width:40%; margin:auto">
-          <h2>Contact Us</h2>
+          <span class="caption-eyebrow">We're here to help</span>
+          <h2>Questions?<br>We Have Answers.</h2>
+          <a href="contactus.html" class="caption-cta">Contact Us</a>
         </div>
       </div>
     </div>
@@ -92,50 +94,116 @@
     </button>
   </div>
 
-  <!-- Hero section -->
-  <div class="background-wrapper" style="min-height:auto; padding:10rem 2rem; text-align:center">
-    <h3>Come fly with us to desired places &amp; we'll take care of your comfort and safety</h3>
-    <hr style="width:30%; margin:1rem auto">
-    <h1>Welcome to Airline Reservation System</h1>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>The World is Waiting for You</h1>
+      <p class="lead">Book flights to hundreds of destinations worldwide. Simple, fast, and affordable — travel your way with SkyLine Air.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-hero-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+          <i class="fas fa-rocket me-2"></i>Create Free Account
+        </a>
+        <a href="aboutUS.html" class="btn btn-hero-outline">
+          <i class="fas fa-circle-info me-2"></i>Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Why Millions Choose SkyLine Air</h2>
+        <p class="section-sub">Everything you need to plan your perfect trip, in one place.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card card">
+            <div class="feature-icon blue mx-auto">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <h5>Easy Booking</h5>
+            <p>Search, compare, and book flights to any destination in seconds with our streamlined booking process.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card card">
+            <div class="feature-icon gold mx-auto">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <h5>Safe &amp; Secure</h5>
+            <p>Your safety is our top priority. All bookings are protected and your data is kept private and secure.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card card">
+            <div class="feature-icon green mx-auto">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h5>Best Prices</h5>
+            <p>Get access to exclusive deals, discounts, and competitive fares across all cabin classes.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card card">
+            <div class="feature-icon purple mx-auto">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h5>24/7 Support</h5>
+            <p>Our dedicated support team is available around the clock to assist you with anything you need.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer id="footer">
-    <div class="container-fluid">
+    <div class="container">
+      <span class="footer-brand">
+        <i class="fas fa-plane brand-icon"></i> SkyLine Air
+      </span>
+      <p class="footer-tagline">Your trusted partner for air travel worldwide.</p>
       <ul class="icons">
-        <li><a href="https://twitter.com/" class="fab fa-twitter" style="color:grey" target="_blank" aria-label="Twitter"></a></li>
-        <li><a href="https://www.facebook.com/" class="fab fa-facebook" style="color:grey" target="_blank" aria-label="Facebook"></a></li>
-        <li><a href="https://www.instagram.com/" class="fab fa-instagram" style="color:grey" target="_blank" aria-label="Instagram"></a></li>
-        <li><a href="mailto:info@airlinereservation.com" class="fas fa-envelope" style="color:grey" aria-label="Email"></a></li>
+        <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:info@skylineair.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
       </ul>
+      <p class="copyright">&copy; 2026 SkyLine Air Reservation System. All rights reserved.</p>
     </div>
-    <div class="copyright">&copy; Airline Reservation System. All rights reserved.</div>
   </footer>
 
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content card-transparent">
         <div class="modal-header card-transparent">
-          <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+          <div>
+            <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-right-to-bracket me-2"></i>Log In</h5>
+            <small style="color:rgba(255,255,255,0.5);font-size:0.78rem">Welcome back! Enter your credentials.</small>
+          </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form action="home.html" method="post">
           <div class="modal-body card-transparent">
             <div class="mb-3">
-              <label class="form-label fw-bold">Email</label>
+              <label class="form-label">Email Address</label>
               <input type="email" class="form-control trans-input-area" placeholder="example@email.com" name="email" required>
             </div>
-            <div class="mb-3">
-              <label class="form-label fw-bold">Password</label>
-              <input type="password" class="form-control trans-input-area" placeholder="Enter Password" name="psw" required>
+            <div class="mb-4">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control trans-input-area" placeholder="Enter your password" name="psw" required>
             </div>
-            <button type="submit" class="btn btn-secondary w-100">Login</button>
+            <button type="submit" class="btn btn-primary w-100 py-2">
+              <i class="fas fa-right-to-bracket me-2"></i>Log In
+            </button>
           </div>
         </form>
         <div class="modal-footer card-transparent">
-          <a href="forgotPassword.html" class="btn btn-secondary w-100">Forgot Password</a>
-          <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+          <a href="forgotPassword.html" class="btn btn-secondary flex-grow-1">Forgot Password?</a>
+          <button type="button" class="btn btn-secondary flex-grow-1" data-bs-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
@@ -143,44 +211,51 @@
 
   <!-- Signup Modal -->
   <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content card-transparent">
         <div class="modal-header card-transparent">
-          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <div>
+            <h5 class="modal-title" id="signupModalLabel"><i class="fas fa-user-plus me-2"></i>Create Account</h5>
+            <small style="color:rgba(255,255,255,0.5);font-size:0.78rem">Join SkyLine Air — it's free.</small>
+          </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form action="home.html" method="post">
           <div class="modal-body card-transparent">
-            <div class="mb-2">
-              <label class="form-label fw-bold">First Name</label>
-              <input type="text" class="form-control trans-input-area" placeholder="First name" name="fname" required>
+            <div class="row g-2 mb-2">
+              <div class="col-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control trans-input-area" placeholder="First name" name="fname" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control trans-input-area" placeholder="Last name" name="lname" required>
+              </div>
             </div>
             <div class="mb-2">
-              <label class="form-label fw-bold">Last Name</label>
-              <input type="text" class="form-control trans-input-area" placeholder="Last name" name="lname" required>
-            </div>
-            <div class="mb-2">
-              <label class="form-label fw-bold">Email</label>
+              <label class="form-label">Email Address</label>
               <input type="email" class="form-control trans-input-area" placeholder="example@email.com" name="email" required>
             </div>
             <div class="mb-2">
-              <label class="form-label fw-bold">Password</label>
-              <input type="password" class="form-control trans-input-area" placeholder="Enter Password" name="psw" required>
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control trans-input-area" placeholder="Create a password" name="psw" required>
             </div>
             <div class="mb-2">
               <label class="form-label">Date of Birth</label>
               <input type="date" class="form-control trans-input-area" name="dob" min="1920-01-01" required>
             </div>
             <div class="mb-2">
-              <label class="form-label fw-bold">Address</label>
+              <label class="form-label">Address</label>
               <input type="text" class="form-control trans-input-area" placeholder="1234 Main Street" name="address" required>
             </div>
             <div class="mb-3">
-              <label class="form-label fw-bold">Phone Number</label>
+              <label class="form-label">Phone Number</label>
               <input type="tel" class="form-control trans-input-area" placeholder="608-495-4824"
                 pattern="\d{3}-\d{3}-\d{4}" name="phonenum" required>
             </div>
-            <button type="submit" class="btn btn-secondary w-100">Sign Up</button>
+            <button type="submit" class="btn btn-primary w-100 py-2">
+              <i class="fas fa-user-plus me-2"></i>Create Account
+            </button>
           </div>
         </form>
         <div class="modal-footer card-transparent">
