@@ -1,0 +1,141 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── Carousel ──────────────────────────────────────────── */
+.carousel-caption {
+  top: 20% !important;
+  bottom: auto;
+  font-size: 24px;
+}
+
+.carousel-caption h2 {
+  font-size: 9rem;
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 300;
+}
+
+.carousel-caption p {
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0;
+  padding-bottom: 1.75rem;
+  letter-spacing: 0.25rem;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+#footer {
+  padding: 4rem 0 2rem;
+  background: #000;
+  text-align: center;
+  width: 100%;
+}
+
+ul.icons {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 0 2rem 0 0;
+  font-size: 36px;
+}
+
+.copyright {
+  color: #888;
+}
+
+/* ── Background wrapper ────────────────────────────────── */
+.background-wrapper {
+  background-color: rgba(0, 0, 0, 0.41);
+  color: #bfbfbf;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  min-height: calc(100vh - 56px);
+}
+
+/* ── Transparent card (Bootstrap 5 replacement for panel-transparent) ── */
+.card-transparent {
+  background: none;
+  border-radius: 0;
+  border: none;
+}
+
+.card-transparent .card-header {
+  background: rgba(122, 130, 136, 0.6) !important;
+  color: #fff;
+}
+
+.card-transparent .card-body {
+  background: rgba(46, 51, 56, 0.4) !important;
+  color: #fff;
+}
+
+/* ── Transparent inputs ────────────────────────────────── */
+.trans-input-area {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.trans-input-area::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.trans-input-area option {
+  background-color: #222;
+  color: #fff;
+}
+
+/* ── Sidebar ───────────────────────────────────────────── */
+.sidebar {
+  min-height: calc(100vh - 56px);
+  background-color: #222;
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .sub-nav .nav-link {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.3rem 1rem 0.3rem 1.5rem;
+}
+
+.sidebar .sub-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Main content area ─────────────────────────────────── */
+.main-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  min-height: calc(100vh - 56px);
+}
+
+header h1,
+header h2 {
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
