@@ -1,0 +1,19 @@
+{
+  "name": "airline-management-system",
+  "version": "2.0.0",
+  "description": "A web-based airline reservation management system built with Bootstrap 5",
+  "scripts": {
+    "start": "npx serve . --listen 3000",
+    "lint:html": "npx htmlhint \"Pages/**/*.html\"",
+    "lint:css": "npx stylelint \"Pages/**/*.css\""
+  },
+  "keywords": ["airline", "reservation", "management", "bootstrap5"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "serve": "^14.2.3",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}
